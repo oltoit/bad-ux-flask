@@ -1,9 +1,19 @@
 FROM python:3.12-slim
 
 WORKDIR /app
-COPY . /app
+
+# Install dependencies
+COPY src/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+RUN rm requirements.txt
 
-EXPOSE 80
+RUN pip install gunicorn
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
+COPY src/ .
+
+ENV DEBUG="False"
+ENV ALLOWD_HOSTS="localhost"
+ENV ADMIN_ENABLED="False"
+
+EXPOSE 8080
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
