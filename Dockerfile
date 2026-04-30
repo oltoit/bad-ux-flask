@@ -11,9 +11,5 @@ RUN pip install gunicorn
 
 COPY src/ .
 
-ENV DEBUG="False"
-ENV ALLOWD_HOSTS="localhost"
-ENV ADMIN_ENABLED="False"
-
 EXPOSE 8080
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
