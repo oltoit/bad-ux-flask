@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad UI/UX Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="centering-container">
+        <h1>{{ title }}</h1>
+        <div class="v-box">
+            <a href="/register" class="button">Register</a>
+            <a href="/login" class="button">Login</a>
+            <a href="/delete" class="button">Delete</a>
+            <a href="/captcha" class="button">Captcha</a>
+        </div>
+    </div>
+</body>
+</html>
