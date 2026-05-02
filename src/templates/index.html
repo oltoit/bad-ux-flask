@@ -7,14 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="centering-container">
-        <h1>{{ title }}</h1>
-        <div class="v-box">
-            <a href="/register" class="button">Register</a>
-            <a href="/login" class="button">Login</a>
-            <a href="/delete" class="button">Delete</a>
-            <a href="/captcha" class="button">Captcha</a>
-        </div>
-    </div>
+    <h1>{{ title }}</h1>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <a href="/delete">Delete</a>
+    <a href="/captcha">Captcha</a>
 </body>
 </html>

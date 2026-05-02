@@ -1,35 +1,45 @@
-.centering-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+  background-color: #1a1a1a;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.v-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h1 {
+  color: white;
+  font-size: clamp(1.2rem, 7vh, 6rem);
+  text-align: center;
+  margin: 0 0 4vh 0;
+  text-transform: uppercase;
 }
 
-/* Styling for anchor element to look like a button */
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-width: 10vw;
-    padding: 10px 20px;
-    margin: 5px;
-
-    border: 2px solid black;
-    border-radius: 5px;
-
-    text-decoration: none;
-    color: black;
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 500px;
+  height: 12vh;
+  margin: 2vh 0;
+  background-color: black;
+  color: #00ff88;
+  text-decoration: none;
+  font-size: clamp(1.1rem, 5vh, 4rem);
+  font-weight: 800;
+  border: 3px solid #00ff88;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
-.button:visited {
-    text-decoration: none;
-    color: black;
+a:hover {
+  background-color: #00ff88;
+  color: black;
 }
